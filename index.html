@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="header-container container">
         <nav class="header-nav">
           <a class="header-logo logo" href="./index.html"
@@ -44,8 +44,13 @@
             </li>
           </ul>
         </address>
+        <button class="header-burger-btn" id="open-menu" type="button">
+          <svg class="header-burger-svg" width="24" height="24">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+    </header>
     <main>
       <section class="service section">
         <div class="container">
@@ -115,6 +120,7 @@
             <li class="team-card">
               <img
                 class="team-item-image"
+                srcset="./images/mark-guerrero.jpg 1x, ./images/mark-guerrero@2x.jpg 2x"
                 src="./images/mark-guerrero.jpg"
                 width="264"
                 alt="Mark Guerrero"
@@ -155,7 +161,13 @@
               </div>
             </li>
             <li class="team-card">
-              <img class="team-item-image" src="./images/tom-ford.jpg" width="264" alt="Tom Ford" />
+              <img
+                class="team-item-image"
+                srcset="./images/tom-ford.jpg 1x, ./images/tom-ford@2x.jpg 2x"
+                src="./images/tom-ford.jpg"
+                width="264"
+                alt="Tom Ford"
+              />
               <div class="person-info">
                 <h3 class="team-item-title">Tom Ford</h3>
                 <p class="team-item-text">Frontend Developer</p>
@@ -194,6 +206,7 @@
             <li class="team-card">
               <img
                 class="team-item-image"
+                srcset="./images/camila-garcia.jpg 1x, ./images/camila-garcia@2x.jpg 2x"
                 src="./images/camila-garcia.jpg"
                 width="264"
                 alt="Camila Garcia"
@@ -236,6 +249,7 @@
             <li class="team-card">
               <img
                 class="team-item-image"
+                srcset="./images/daniel-wilson.jpg 1x, ./images/daniel-wilson@2x.jpg 2x"
                 src="./images/daniel-wilson.jpg"
                 width="264"
                 alt="Daniel Wilson"
@@ -278,7 +292,7 @@
           </ul>
         </div>
       </section>
-      <!-- <section class="portfolio section">
+      <section class="portfolio section">
         <div class="container">
           <h2 class="portfolio-setion-title">Our Portfolio</h2>
           <ul class="portfolio-list">
@@ -286,6 +300,7 @@
               <div class="portfolio-item-wrapper">
                 <img
                   class="portfolio-item-image"
+                  srcset="./images/bank-app.jpg 1x, ./images/bank-app@2x.jpg 2x"
                   src="./images/bank-app.jpg"
                   width="360"
                   alt="Banking Application"
@@ -304,6 +319,7 @@
               <div class="portfolio-item-wrapper">
                 <img
                   class="portfolio-item-image"
+                  srcset="./images/cashless-payment.jpg 1x, ./images/cashless-payment@2x.jpg 2x"
                   src="./images/cashless-payment.jpg"
                   width="360"
                   alt="Cashless Payment "
@@ -322,6 +338,7 @@
               <div class="portfolio-item-wrapper">
                 <img
                   class="portfolio-item-image"
+                  srcset="./images/meditation-app.jpg 1x, ./images/meditation-app@2x.jpg 2x"
                   src="./images/meditation-app.jpg"
                   width="360"
                   alt="Meditation App"
@@ -340,6 +357,7 @@
               <div class="portfolio-item-wrapper">
                 <img
                   class="portfolio-item-image"
+                  srcset="./images/taxi.jpg 1x, ./images/taxi@2x.jpg 2x"
                   src="./images/taxi.jpg"
                   width="360"
                   alt="Taxi Service"
@@ -358,6 +376,10 @@
               <div class="portfolio-item-wrapper">
                 <img
                   class="portfolio-item-image"
+                  srcset="
+                    ./images/screen-illustrations.jpg    1x,
+                    ./images/screen-illustrations@2x.jpg 2x
+                  "
                   src="./images/screen-illustrations.jpg"
                   width="360"
                   alt="Screen Illustrations"
@@ -376,6 +398,7 @@
               <div class="portfolio-item-wrapper">
                 <img
                   class="portfolio-item-image"
+                  srcset="./images/girl-with-phone.jpg 1x, ./images/girl-with-phone@2x.jpg 2x"
                   src="./images/girl-with-phone.jpg"
                   width="360"
                   alt="Online Courses"
@@ -392,9 +415,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
     </main>
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container footer-container">
         <div class="footer-box-content">
           <a class="footer-logo logo" href="./index.html"
@@ -453,11 +476,11 @@
           </form>
         </div>
       </div>
-    </footer> -->
-    <div class="modal-container">
+    </footer>
+    <div class="modal-container is-open">
       <div class="modal-wrapper">
-        <button class="modal-close" type="button">
-          <svg class="modal-close-icon" width="8" height="8">
+        <button class="close-btn" type="button">
+          <svg class="close-btn-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
@@ -514,13 +537,85 @@
                   <use href="./images/icons.svg#icon-clicked"></use>
                 </svg>
               </span>
-              I accept the terms and conditions of the
-              <a class="modal-privacy-link" href="#">Privacy Policy</a>
+              <p>
+                I accept the terms and conditions of the
+                <a class="modal-privacy-link" href="#">Privacy Policy</a>
+              </p>
             </label>
           </div>
           <button class="modal-form-btn" type="button">Send</button>
         </form>
       </div>
     </div>
+    <div class="menu">
+      <button class="close-btn" id="close-menu" type="button">
+        <svg class="close-btn-icon" width="8" height="8">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <nav class="menu-nav">
+        <ul class="menu-list">
+          <li class="menu-list-item">
+            <a class="menu-list-link active" href="./index.html">Studio</a>
+          </li>
+          <li class="menu-list-item"><a class="menu-list-link" href="">Portfolio</a></li>
+          <li class="menu-list-item"><a class="menu-list-link" href="">Contacts</a></li>
+        </ul>
+      </nav>
+      <address class="menu-address">
+        <ul class="menu-address-list">
+          <li class="menu-address-item">
+            <a class="menu-address-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          </li>
+          <li class="menu-address-item">
+            <a class="menu-address-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+          </li>
+        </ul>
+      </address>
+      <ul class="social-list">
+        <li class="social-list-item">
+          <a class="social-list-link" href="#">
+            <svg class="social-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-list-item">
+          <a class="social-list-link" href="#">
+            <svg class="social-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-list-item">
+          <a class="social-list-link" href="#">
+            <svg class="social-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-list-item">
+          <a class="social-list-link" href="#">
+            <svg class="social-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      // Get references to the element and button
+      const elementToToggle = document.querySelector(".menu");
+      const toggleButton = document.querySelector("#open-menu");
+      const closeButton = document.querySelector("#close-menu");
+      // Function to toggle the class
+      function toggleClass() {
+        elementToToggle.classList.toggle("is-open");
+      }
+      closeButton.addEventListener("click", toggleClass);
+      // Add a click event listener to the button
+      toggleButton.addEventListener("click", toggleClass);
+    </script>
   </body>
 </html>
